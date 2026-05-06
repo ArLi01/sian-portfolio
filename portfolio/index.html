@@ -36,7 +36,6 @@
       cursor: none;
     }
 
-    /* ── CUSTOM CURSOR ── */
     #cursor {
       width: 10px; height: 10px;
       background: var(--accent);
@@ -58,7 +57,6 @@
       transform: translate(-50%, -50%);
     }
 
-    /* ── NOISE OVERLAY ── */
     body::before {
       content: '';
       position: fixed;
@@ -69,7 +67,6 @@
       opacity: 0.5;
     }
 
-    /* ── NAV ── */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -106,10 +103,8 @@
     .nav-links a:hover { color: var(--text); }
     .nav-links a:hover::after { width: 100%; }
 
-    /* ── SECTIONS ── */
     section { position: relative; z-index: 1; }
 
-    /* ── HERO ── */
     #hero {
       min-height: 100vh;
       display: flex;
@@ -268,7 +263,6 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* ── SECTION COMMON ── */
     .section-inner {
       max-width: 1100px;
       margin: 0 auto;
@@ -300,7 +294,6 @@
       max-width: 480px;
     }
 
-    /* ── ABOUT ── */
     #about { padding: 120px 0; }
     .about-grid {
       display: grid;
@@ -385,8 +378,7 @@
       justify-content: center;
       font-size: 0.8rem;
     }
-
-    /* ── TIMELINE ── */
+    
     #experience { padding: 120px 0; background: linear-gradient(to bottom, transparent, var(--surface) 20%, var(--surface) 80%, transparent); }
     .timeline {
       position: relative;
@@ -448,7 +440,6 @@
       line-height: 1.8;
     }
 
-    /* ── SKILLS ── */
     #skills { padding: 120px 0; }
     .skills-grid {
       display: grid;
@@ -504,7 +495,6 @@
       transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
     }
 
-    /* ── PROJECTS ── */
     #projects { padding: 120px 0; background: linear-gradient(to bottom, transparent, var(--surface) 20%, var(--surface) 80%, transparent); }
     .projects-grid {
       display: grid;
@@ -617,7 +607,6 @@
       transition: color 0.2s;
     }
     .project-link:hover { color: var(--accent); }
-    /* ── PROJECT SCREENSHOTS ── */
     .project-screenshots {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -641,7 +630,6 @@
       transform: scale(1.02);
       border-color: var(--border-hover);
     }
-    /* Lightbox */
     #lightbox {
       display: none;
       position: fixed;
@@ -686,7 +674,6 @@
       font-weight: 500;
     }
 
-    /* ── CONTACT ── */
     #contact { padding: 120px 0 160px; }
     .contact-wrap {
       display: grid;
@@ -766,7 +753,6 @@
       box-shadow: 0 0 30px rgba(56,189,248,0.3);
     }
 
-    /* ── FOOTER ── */
     footer {
       border-top: 1px solid var(--border);
       padding: 32px 48px;
@@ -779,7 +765,6 @@
     .footer-left { font-size: 0.82rem; color: var(--muted); }
     .footer-right { font-size: 0.82rem; color: var(--muted); }
 
-    /* ── SCROLL REVEAL ── */
     .reveal {
       opacity: 0;
       transform: translateY(30px);
@@ -787,12 +772,10 @@
     }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    /* ── SCROLLBAR ── */
     ::-webkit-scrollbar { width: 4px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
     ::-webkit-scrollbar-thumb { background: var(--muted); border-radius: 4px; }
 
-    /* ── RESPONSIVE — TABLET (≤1024px) ── */
     @media (max-width: 1024px) {
       .about-grid { gap: 48px; }
       .contact-wrap { gap: 48px; }
@@ -800,15 +783,12 @@
       .skills-grid { grid-template-columns: 1fr 1fr; }
     }
 
-    /* ── RESPONSIVE — MOBILE (≤768px) ── */
     @media (max-width: 768px) {
-      /* Hide custom cursor on touch devices */
       #cursor, #cursor-trail { display: none; }
       body { cursor: auto; }
       a, button, .project-card, .btn-primary, .btn-secondary,
       .form-submit, .contact-link { cursor: pointer; }
 
-      /* Nav — hide text links, show hamburger menu */
       nav { padding: 14px 20px; }
       .nav-links {
         display: none;
@@ -844,7 +824,6 @@
       .hamburger.open span:nth-child(2) { opacity: 0; }
       .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-      /* Hero */
       #hero { padding: 90px 20px 60px; }
       .hero h1 { font-size: clamp(2.4rem, 11vw, 3.5rem); }
       .hero-desc { font-size: 1rem; }
@@ -853,39 +832,31 @@
       .hero-stats { gap: 20px; flex-wrap: wrap; margin-top: 48px; padding-top: 28px; }
       .stat-num { font-size: 1.6rem; }
 
-      /* Sections */
       .section-inner { padding: 0 20px; }
       #about, #skills, #contact { padding: 80px 0; }
       #experience { padding: 80px 0; }
       #projects { padding: 80px 0; }
 
-      /* About */
       .about-grid { grid-template-columns: 1fr; gap: 36px; }
 
-      /* Timeline */
       .timeline { padding-left: 28px; }
       .timeline-dot { left: -35px; }
 
-      /* Skills */
       .skills-grid { grid-template-columns: 1fr; gap: 16px; }
       .skill-list li { font-size: 0.82rem; }
       .skill-bar-wrap { width: 60px; }
 
-      /* Projects */
       .projects-grid { grid-template-columns: 1fr; gap: 20px; }
       .project-screenshots { grid-template-columns: 1fr; }
       .project-card { padding: 24px; }
 
-      /* Contact */
       .contact-wrap { grid-template-columns: 1fr; gap: 40px; }
       .form-row { grid-template-columns: 1fr; }
       .form-submit { width: 100%; justify-content: center; }
 
-      /* Footer */
       footer { padding: 24px 20px; flex-direction: column; gap: 8px; text-align: center; }
     }
 
-    /* ── RESPONSIVE — SMALL MOBILE (≤400px) ── */
     @media (max-width: 400px) {
       .hero h1 { font-size: 2.2rem; }
       .hero-label { font-size: 0.7rem; }
@@ -903,7 +874,6 @@
 <div id="cursor"></div>
 <div id="cursor-trail"></div>
 
-<!-- NAV -->
 <nav>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
@@ -914,7 +884,6 @@
   </ul>
 </nav>
 
-<!-- HERO -->
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
@@ -951,7 +920,6 @@
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="section-inner">
     <div class="about-grid">
@@ -999,7 +967,6 @@
   </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-inner">
     <div class="section-header reveal">
@@ -1040,7 +1007,6 @@
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
   <div class="section-inner">
     <div class="section-header reveal">
@@ -1096,7 +1062,6 @@
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
   <div class="section-inner">
     <div class="section-header reveal">
@@ -1186,7 +1151,6 @@
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="section-inner">
     <div class="contact-wrap">
@@ -1251,14 +1215,12 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <span class="footer-left">© 2025 Arwin Ligouri M. Sian. All rights reserved.</span>
   <span class="footer-right">Built with purpose · Philippines 🇵🇭</span>
 </footer>
 
 <script>
-  /* CURSOR */
   const cursor = document.getElementById('cursor');
   const trail = document.getElementById('cursor-trail');
   let mx = 0, my = 0, tx = 0, ty = 0;
@@ -1278,12 +1240,10 @@
     el.addEventListener('mouseleave', () => { cursor.style.transform = 'translate(-50%,-50%) scale(1)'; });
   });
 
-  /* SCROLL REVEAL */
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        /* Animate skill bars */
         entry.target.querySelectorAll('.skill-bar').forEach(bar => {
           bar.style.width = bar.dataset.width + '%';
         });
@@ -1295,14 +1255,11 @@
     observer.observe(el);
   });
 
-  /* NAV SHRINK */
   window.addEventListener('scroll', () => {
     const nav = document.querySelector('nav');
     nav.style.padding = window.scrollY > 60 ? '12px 48px' : '20px 48px';
   });
 
-  /* FORM — posts to Cloudflare Worker */
-  /* Replace WORKER_URL below with your deployed Worker URL after setup */
   const WORKER_URL = 'https://YOUR_WORKER_NAME.YOUR_SUBDOMAIN.workers.dev/contact';
 
   document.getElementById('contact-form').addEventListener('submit', async (e) => {
@@ -1338,19 +1295,16 @@
     btn.disabled = false;
   });
 
-  /* STAGGER PROJECT CARDS */
   document.querySelectorAll('.project-card').forEach((card, i) => {
     card.style.transitionDelay = (i * 0.12) + 's';
   });
 </script>
 
-<!-- LIGHTBOX -->
 <div id="lightbox" onclick="closeLightbox()">
   <button id="lightbox-close" onclick="closeLightbox()">✕</button>
   <img id="lightbox-img" src="" alt="Project screenshot enlarged">
 </div>
 <script>
-  /* LIGHTBOX */
   function openLightbox(src) {
     document.getElementById('lightbox-img').src = src;
     document.getElementById('lightbox').classList.add('open');
